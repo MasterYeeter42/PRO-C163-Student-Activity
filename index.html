@@ -10,9 +10,10 @@
 
   <script src="https://unpkg.com/aframe-environment-component@1.1.0/dist/aframe-environment-component.min.js"></script>
 
+  <!--Local Scripts-->
   <script src="./shoot.js"></script>
-
   <script src="./gameObjects.js"></script>
+  <script src="./playerMovement.js"></script>
 
 </head>
 
@@ -28,15 +29,20 @@
 
     </a-assets>
 
-    <!--Add A-Frame Environment-->
-    
-    
+    <!--A-Frame Environment-->
+    <a-entity id="environment" environment="preset: egypt; skyType:gradient; lighting:point">
+    </a-entity>
+
     <!--Add Sounds-->    
     <a-entity id="sound1" sound="src: #shoot; poolSize:2; autoplay: false; volume: 1;loop:false"></a-entity>
+
+    <a-entity id="sound2" ></a-entity>
     
+    <!--Game Objects-->
+    <a-entity wire-fence ></a-entity>
+
     
-    <!--Add Game Objects-->
-   
+
     <!--Bullets-->
     <a-entity bullets></a-entity>
 

@@ -82,4 +82,39 @@ AFRAME.registerComponent("wire-fence", {
 });
 
 //boxes
-//Add the component code here
+//UPDATE the component code here
+AFRAME.registerComponent("boxes", {
+  schema: {
+    height: { type: "number", default: 3 },
+    width: { type: "number", default: 3 },
+    depth: { type: "number", default: 3 },
+  },
+  init: function () {
+    //keep the loop counter very less if the scene is not loading
+    for (var i = 0; i < 20; i++) {
+
+      var box = document.createElement("a-entity");
+      box.setAttribute("id", "box" + i); 
+
+      //set position attribute
+      posX = Math.random()*200 -100;
+      posY = 1.5;
+      posZ =Math.random()*200 -100;
+
+      
+
+      //set geometry attribute
+      
+
+      //set material attribute
+      
+
+      // set static-body attribute
+     
+
+      //append the box to the scene
+      
+    }
+  },
+});
+
